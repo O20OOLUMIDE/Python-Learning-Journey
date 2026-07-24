@@ -1,0 +1,15 @@
+# Characters problem:
+
+# Subroutine to produce desired output
+def char_output():
+    digits = "0123456789"
+    characters = "abcdABCD@#!£"
+    alphanumerics = digits + " " + characters
+
+    print("The digits are:", digits)
+    print("The characters are:", characters)
+    print("The alphanumerics are:", alphanumerics)
+
+
+# Main program
+char_output()
