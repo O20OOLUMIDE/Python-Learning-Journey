@@ -1,0 +1,13 @@
+# Microscopy problem
+
+def magnified(real_size, image_size):
+    magnified_by = image_size / real_size * 10000
+    return magnified_by
+
+
+# Main program
+image_size  = 4
+real_size = 80
+magnification = magnified(real_size, image_size)
+print("The magnification of the image is x{}".format(magnification))
+
