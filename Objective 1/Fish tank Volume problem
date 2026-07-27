@@ -1,0 +1,13 @@
+# Fish tank problem
+
+def volume_of_fishtank(length, depth, height):
+    volume_litres = length * depth * height / 1000
+    return volume_litres
+
+
+# Main program
+length = 10
+depth = 20
+height = 30
+volume = volume_of_fishtank(length, depth, height)
+print("Volume of the fish tank is =", volume, "litres") 
