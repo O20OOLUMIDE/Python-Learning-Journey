@@ -1,0 +1,31 @@
+# Carpet cost problem
+
+# Subroutine that outputs the cost of fitting a carpet
+def cost_of_fitting_carpet(width, length, price_per_m2):
+    # Calculate the area of the room
+    area = width * length
+    
+    # Underlay costs £3 per square metre
+    underlay_cost = area * 3
+
+    # Carpet cost based on price per square metre
+    carpet_cost = price_per_m2 * area
+    
+    # Grippers cost £1 per metre around the perimeter
+    grippers_cost = (width * 2 + length * 2) * 1
+    
+    # Fitting fee is a flat £50
+    fitting_fee = 50
+
+    # Total cost
+    total_cost = carpet_cost + underlay_cost + grippers_cost + fitting_fee
+    return total_cost
+
+
+# Main program
+width = 7
+length = 6
+price_per_m2 = 17
+
+total = cost_of_fitting_carpet(width, length, price_per_m2)
+print("The total cost of fitting the carpet is £{}".format(total))
