@@ -1,0 +1,23 @@
+# Circle properties problem
+
+# Subroutine that outputs properties of a circle
+def circle_properties(diameter, arc_angle):
+    
+    radius = diameter / 2
+    area = 3.14 * radius ** 2
+    circumference = 3.14 * diameter
+    arc_length = circumference * arc_angle / 360
+
+    return radius, area, circumference, arc_length
+
+
+# Main program
+diameter = 10
+arc_angle = 90
+
+radius, area, circumference, arc_length = circle_properties(diameter, arc_angle)
+
+print("The radius of the circle = {:.2f}m".format(radius))
+print("The area of the circle = {:.2f}m²".format(area))
+print("The circumference of the circle = {:.2f}m".format(circumference))
+print("The arc length of the circle = {:.2f}m".format(arc_length))
