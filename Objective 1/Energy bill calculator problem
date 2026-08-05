@@ -1,0 +1,21 @@
+# Energy bill calculator problem
+
+# Subroutine that will output the raw cost of energy usage
+def raw_cost_of_energy_usage(previous_reading, current_reading, calorific_value):
+
+    units_used = current_reading - previous_reading
+    kWh = units_used * 1.022 * calorific_value / 3.6
+    cost_per_kWh = 0.0284
+
+    total_price = kWh * cost_per_kWh
+    return total_price
+
+
+# Main program
+calorific_value = 39.3
+previous_reading = 48250
+current_reading = 48600
+
+total_cost = raw_cost_of_energy_usage(previous_reading, current_reading, calorific_value)
+print("The total price = {:.2f}".format(total_cost))
+
