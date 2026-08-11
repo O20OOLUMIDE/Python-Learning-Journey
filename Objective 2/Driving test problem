@@ -1,0 +1,11 @@
+# Driving test problem
+
+# Subroutine to output pass or fail for driving test
+def pass_fail(minor_faults):
+    if minor_faults < 16:
+        return "pass"
+    else:
+        return "fail"
+
+# Main program
+print(pass_fail(16))
