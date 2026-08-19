@@ -1,0 +1,19 @@
+# Career quote problem
+
+job_roles = {
+    "Engineer": "The engineer has been, and is, a maker of history",
+    "Developer": "Logical thinking, passion and perseverance is the paint on your palette",
+    "Analyst": "Seeing what other people cant see gives you great vision",
+    "None of the above": "I am sorry. We could not find a quote for your job"
+}
+    
+        
+# Subroutine to output a quote based on job role
+def job_quote(job):
+    return job_roles.get(job, job_roles["None of the above"])
+    
+
+# Main program
+job = "Engineer"
+answer = job_quote(job)
+print(f"The quote related to job is: {answer}") 
