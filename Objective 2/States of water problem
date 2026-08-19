@@ -1,0 +1,15 @@
+# States of water problem
+
+# Subroutine that will display state water is in
+def state(temp):
+    if temp >= 100:
+        return "gaseous"
+    elif temp >= 1:
+        return "liquid"
+    else:
+        return "solid"
+
+# Main program
+temp = 101
+answer = state(temp)
+print(f"The state of matter the water is in is: {answer}")
