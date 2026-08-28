@@ -1,0 +1,20 @@
+# Nitrate problem
+
+# Subroutine to return carbon dose
+def carbon_dose(nitrate):
+    if nitrate > 10:
+        return 3
+
+    elif nitrate > 2.5:
+        return 2
+
+    elif nitrate > 1:
+        return 1
+
+    else:
+        return 0.5
+
+# Main program
+nitrate = 2
+answer = carbon_dose(nitrate)
+print(f"For {nitrate} dose {answer}ml")
