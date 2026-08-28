@@ -1,0 +1,36 @@
+# Currency converter problem
+
+# Dictionary of exchange rates
+exchange_rates = {
+    "USD": 1.29,
+    "EUR": 1.17,
+    "CNY": 9.35,
+    "JPY": 183.50
+}
+
+# Dictionary of currency symbols
+currency_symbols = {
+    "USD": "$",
+    "EUR": "€",
+    "CNY": "¥",
+    "JPY": "¥",
+}
+
+# Subroutine that converts money based on current values
+def convert(gbp, currency):
+    rate = exchange_rates.get(currency)
+    amount = gbp * rate
+    symbol = currency_symbols.get(currency)
+    
+    return amount, symbol
+
+   
+# Main program
+gbp = int(input("Enter the amount of gbp you want converted: "))
+currency = input("Enter currency: USD / EUR / CNY / JPY ").strip().upper()
+answer = convert(gbp, currency)
+converted_amount = answer[0]
+currency_symbol = answer[1]
+
+
+print(f"£{gbp} is equal to: {currency_symbol}{converted_amount:.2f}")
