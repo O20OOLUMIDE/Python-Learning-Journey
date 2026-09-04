@@ -1,0 +1,53 @@
+# Exam grade problem
+
+# Dicitionary to store the Grades and Marks
+grades = {
+    "U": 2,
+    "1": 2,
+    "2": 4,
+    "3": 13,
+    "4": 22,
+    "5": 31,
+    "6": 41,
+    "7": 54,
+    "8": 67,
+    "9": 80
+}
+
+# List to store grade order
+grade_order = ["U", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+
+# Subroutine to output grade student got based on marks
+def grade_info(mark):
+    last_grade = "U"
+
+    for i, grade in enumerate(grade_order):
+        boundary = grades[grade]
+        if mark >= boundary:
+            last_grade = grade
+
+        else:
+            break
+
+    i = grade_order.index(last_grade)  # Find the index of the grade
+
+    if i == len(grade_order) - 1:
+        return last_grade, None, 0
+
+    next_grade = grade_order[i + 1]
+    next_boundary = grades[next_grade]
+    difference = next_boundary - mark
+    return last_grade, next_grade, difference
+
+# Main program
+marks = int(input("Enter marks you got in exam: "))
+
+grade_got, grade_after, mark_difference = grade_info(marks)
+print(f"The grade you got was {grade_got}")
+
+if grade_after ==  None:
+    print("You already achieved the highest grade")
+
+else:
+    print(f"You were {mark_difference} away from achieving {grade_after}") 
+
