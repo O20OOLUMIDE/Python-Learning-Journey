@@ -1,0 +1,70 @@
+# Periodic table problem
+
+# Dicitonary to store element info
+element_info = [
+    {
+        "name": "Lithium",
+        "symbol": "Li", 
+        "weight": 6.94, 
+        "group": "Alkali metals"
+    },
+
+    {
+        "name": "Sodium",
+        "symbol": "Na",
+        "weight": 22.99,
+        "group": "Alkali metals"
+    },
+
+    {
+        "name": "Potassium",
+        "symbol": "K",
+        "weight": 39.10,
+        "group": "Alkali metals"
+    },
+
+    {
+        "name": "Flourine",
+        "symbol": "F",
+        "weight": 19.00,
+        "group": "Halogens"
+    },
+
+    {
+        "name": "Chlorine",
+        "symbol": "Cl",
+        "weight": 35.45,
+        "group": "Halogens"
+    },
+
+    {
+        "name": "Bromine",
+        "symbol": "Br",
+        "weight": 79.00,
+        "group": "Halogens"
+    },
+]    
+
+        
+# Subroutine that outputs information about an element
+def get_element_info(search_item):
+    for element in element_info:
+
+        if search_item == element["name"] or search_item == element["symbol"] or search_item == str(element["weight"]) or search_item == element["group"]:
+
+            return element["name"], element["symbol"], element["weight"], element["group"]
+
+        return None, None, None, None
+
+
+# Main program
+search_key = input("Enter search item which can be: (name/symbol/weight/group)")
+element_name, atomic_symbol, atomic_mass, periodic_group = get_element_info(search_key)
+
+if element_name is None:
+    print("No matching element found. ") 
+else:
+    print(f"The element name is: {element_name}")
+    print(f"The element symbol is: {atomic_symbol}")
+    print(f"The element weight is: {atomic_mass}")
+    print(f"The element group is: {periodic_group}")
