@@ -1,0 +1,31 @@
+# Day format problem
+
+# Dictionary to store info for day formats
+days = {
+    1: {"day": "Monday", "shortday": "Mon", "char": "M"},
+    2: {"day": "Tuesday", "shortday": "Tue", "char": "Tu"},
+    3: {"day": "Wednesday", "shortday": "Wed", "char": "W"},
+    4: {"day": "Thursday", "shortday": "Thu", "char": "Th"},
+    5: {"day": "Friday", "shortday": "Fri", "char": "F"},
+    6: {"day": "Saturday", "shortday": "Sat", "char": "Sa"},
+    7: {"day": "Sunday", "shortday": "Sun", "char": "Su"}
+}
+
+
+
+# Subroutine to output day format required
+def day_format(num, output_display):
+    return days.get(num, {}).get(output_display)
+
+
+# Main program
+number = int(input("Enter the number of day: "))
+format_presentation = input("Enter your preferred output display (day/shortday/char): ").lower().strip()
+answer = day_format(number, format_presentation)
+
+if answer == None:
+    print("Error generated you may have spelt the format incorrectly, or write in one we dont support")
+    print("Please try again")
+
+else:
+    print(f"Ouptut is: {answer}") 
