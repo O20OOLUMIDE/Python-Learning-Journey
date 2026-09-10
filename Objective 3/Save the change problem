@@ -1,0 +1,15 @@
+# Save the change problem
+import math
+
+# Subroutine to calculate difference to the nearest 1
+def SaveTheChange(Amount):
+    return math.ceil(Amount) - Amount 
+    
+
+# Main program
+Price = 1.20
+Savings = SaveTheChange(Price)
+
+print(f"Debit - purchase: £{Price:.2f}")
+print(f"Debit - Save the change: £{Savings:.2f}")
+print(f"Credit - Save the changes: £{Savings:.2f}")
