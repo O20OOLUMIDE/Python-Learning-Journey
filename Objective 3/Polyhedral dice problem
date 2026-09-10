@@ -1,0 +1,22 @@
+# Polyhedral dice problem
+import random
+
+# Subroutine to a function that generates a random number
+def random_roll(number_of_faces):
+    allowed_faces = [2, 4, 8, 10, 12, 20]
+    
+    if number_of_faces in allowed_faces:
+        return random.randint(1, number_of_faces)
+
+    else:
+        return None
+
+# Main program
+dice_number = int(input("Enter the number of faces on the dice: ").strip())
+dice_roll = random_roll(dice_number)
+
+if dice_roll == None:
+    print("Invalid input, select among options (2/4/8/10/12/20)")
+
+else:
+    print(f"The dice rolled is: {dice_roll}")
