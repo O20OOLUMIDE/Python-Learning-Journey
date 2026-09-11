@@ -1,0 +1,22 @@
+# Leap year problem
+
+# Subroutine that checks if year inputted is a leap year
+def leap_year(year):
+    if year % 400 == 0:
+        return True
+
+    if year % 100 == 0:
+        return False
+
+    if year % 4 == 0:
+        return True
+
+    else:
+        return False
+
+
+# Main program
+year = int(input("Enter the year: "))
+answer = leap_year(year)
+print(f"This year being a leap year is: {answer}")
+
