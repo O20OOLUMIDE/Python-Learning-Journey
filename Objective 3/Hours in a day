@@ -1,0 +1,10 @@
+# Hours in a day problem
+
+# Subroutine that returns the number of days from hours inputted
+def days(hours):
+    return hours // 24
+
+# Main program
+hours = int(input("Enter the number of hours: "))
+answer = days(hours)
+print(f"The number of days: {answer}") 
