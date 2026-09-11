@@ -1,0 +1,11 @@
+# Clamp problem
+
+# Subroutine to clamp a value
+def clamp(value, maximum):
+    return min(value, maximum)
+    
+# Main program
+value = 6
+maximum = 50
+answer = clamp(value, maximum)
+print(f"The smaller number is: {answer}")
