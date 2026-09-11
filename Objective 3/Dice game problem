@@ -1,0 +1,26 @@
+# Dice game problem
+import random
+
+# Subroutine to calculate score in the dice game
+def ScoreDice(d1, d2, d3):
+    if d1 == d2 == d3:
+        return d1 + d2 + d3
+
+    if d1 == d2:
+        return (d1 + d2) - d3
+
+    if d1 == d3:
+        return (d1 + d3) - d2
+
+    if d2 == d3:
+        return (d2 + d3) - d1
+
+    return 0 
+
+
+# Main program
+d1 = random.randint(1,6)
+d2 = random.randint(1,6)
+d3 = random.randint(1,6)
+answer = ScoreDice(d1, d2, d3)
+print(f"Total score: {answer}") 
