@@ -1,0 +1,15 @@
+# Dogs life problem
+
+# Subroutine that returns the age of a dog in dog years
+def dog_age(num):
+    if num <= 2:
+        return int(num * 12)
+    else:
+        return int(24 + 6 * (num - 2))
+    
+
+# Main program
+num = float(input("Enter the value of dog years: ").strip())
+answer = dog_age(num)
+
+print(f"The age of dog, in dog years is: {answer}")
