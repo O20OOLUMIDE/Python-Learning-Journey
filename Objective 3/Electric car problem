@@ -1,0 +1,22 @@
+# Electric car problem
+import math
+
+# Subroutine to return the total cost and point gained based on minutes stopped
+def electric_car(minutes):
+    if minutes < 15:
+        total_cost = (15 * 0.2) + 1
+        total_points = 22
+        return total_cost, total_points
+
+    else:
+        total_cost = (minutes * 0.2) + 1
+        total_points = math.floor(1.5 * minutes)
+        return total_cost, total_points
+
+    
+# Main program
+minutes = float(input("Enter the number of minutes you have charged your vehicle: ").strip())
+total_price, points_gained = electric_car(minutes)
+
+print(f"The total price due is: {total_price:.2f}")
+print(f"The total cost gained is: {points_gained}")
