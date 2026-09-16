@@ -1,0 +1,9 @@
+# Tweet problem
+
+# Function to return if post is less than or equal to 20 characters
+def good_post(tweet):
+    return len(tweet) <= 20
+
+
+# Main program
+print(good_post("This is a sample post for social networking. "))
