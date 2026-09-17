@@ -1,0 +1,17 @@
+# Inventory problem
+
+# Inventory of items the character has
+inventory = ["Sword", "Shield", "Potion", "Amulet"]
+
+# Subroutine that checks if an item is in a players inventory or not
+def exists(item):
+    for equipment in inventory:
+        if equipment.lower() == item.lower():
+            return True
+    return False
+
+# Main program
+item = input("Enter the item: ").strip()
+
+answer = exists(item)
+print(f"Does the item exist in inventory: {answer}") 
