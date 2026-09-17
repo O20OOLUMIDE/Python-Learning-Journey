@@ -1,0 +1,14 @@
+# Initial and Surname problem
+
+# Subroutine that returns first intial of first name and surname
+def full_name(forename, surname):
+    intial = forename[0]
+    return (intial + " " + surname).upper()
+
+# Main program
+forename = input("Enter your forename: ").strip()
+surname = input("Enter your surname: ").strip()
+
+answer = full_name(forename, surname)
+print(f"Your assigned full name is: {answer}")
+
