@@ -1,0 +1,13 @@
+# Airline ticket problem
+
+# Subroutine that returns the first four letters of 2 cities
+def four_letter(city1, city2):
+    return (f"{city1[:4]}-{city2[:4]}").upper()
+
+# Main program
+city1 = input("Enter the name of the first city: ").strip()
+city2 = input("Enter the name of the second city: ").strip()
+
+answer = four_letter(city1, city2)
+print(f"The assigned full name of the two cities: {answer}")
+
