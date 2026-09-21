@@ -1,0 +1,22 @@
+# Teacher code problem
+
+# Subroutine that returns the intials of a teacher name
+def intials(first_name, middle_name, last_name):
+    first_intial = first_name[0]
+    
+    if middle_name == "":
+        middle_intial = "Z"
+    else:
+        middle_intial = middle_name[0]
+        
+    last_intial = last_name[0]
+
+    return (first_intial + middle_intial + last_intial).upper()
+
+# Main program
+first_name = input("Enter the first name of the teacher: ").strip()
+middle_name = input("Enter the middle name of the teacher: ").strip()
+last_name = input("Enter the last name of the teacher: ").strip()
+
+answer = intials(first_name, middle_name, last_name)
+print(f"The intials of the teacher name is: {answer}") 
