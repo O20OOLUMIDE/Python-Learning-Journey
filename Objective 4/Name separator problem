@@ -1,0 +1,16 @@
+# Name separator problem
+
+# Subroutine that returns the forename and surname
+def two_name(full_name):
+    if " " not in full_name:
+        return False
+
+    forename, surname = full_name.split(" ")
+    return forename, surname
+
+# Main program
+full_name = input("Enter your full name, with a space between forename and surname: ").strip()
+answer1, answer2 = two_name(full_name)
+
+print(f"The forename is: {answer1}")
+print(f"The surname is: {answer2}")
