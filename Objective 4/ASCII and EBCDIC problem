@@ -1,0 +1,41 @@
+# ASCII AND EBCDIC problem
+
+# String containing alphabets
+alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+# Subroutine that takes a letter as a parameter and returns both the ASCII and EBCIDIC code
+def ascii_ebcdic(letter):
+    if len(letter) != 1:
+        return None, None
+    index = alphabets.find(letter)
+
+    if index != -1:
+        ascii_code = index + 65
+    else:
+        return None, None
+
+    if index < 9:
+        ebcdic_code = index + 193
+    elif index < 18:
+        ebcdic_code = index + 209
+    else:
+        ebcdic_code = index + 208
+
+    return ascii_code, ebcdic_code
+
+
+# Main program
+letter = input("Enter one letter that you want to be converted into ASCII and EBCDIC code: ").upper().strip()
+ascii_answer, ebcdic_answer = ascii_ebcdic(letter)
+
+if ascii_answer is None:
+    print("Error! Invalid input")
+
+else:
+    print(f"{letter} code in ASCII is equal to: {ascii_answer}")
+    print(f"{letter} code in EBCDIC is equal to: {ebcdic_answer}")
+
+
+
+    
+        
