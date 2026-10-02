@@ -1,0 +1,12 @@
+# Ten green bottles problem
+
+# Subroutine that outputs a childen song
+def child_song():
+    for counter in range(10, 0, -1):
+        print(f"{counter} green bottles hanging on the wall,")
+        print(f"{counter} green bottles hanging on the wall,")
+        print(f"And if one green bottle should accidentally fall,")
+        print(f"Therell be {counter - 1} bottles hanging on the wall\n")
+
+# Main program
+child_song()
