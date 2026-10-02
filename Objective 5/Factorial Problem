@@ -1,0 +1,15 @@
+# Factorial problem
+
+# Subroutine that calculates the factorial of a number
+def fact(number):
+    total = 1
+    
+    for counter in range(number, 0, -1):
+        total = total * counter 
+    return total
+
+# Main program
+number = int(input("Enter number you want to calculate the factorial of: "))
+answer2 = fact(number)
+
+print(f"The factorial of {number} is = {answer2}")
