@@ -1,0 +1,10 @@
+# Times table problem
+
+# Subroutine to output the X times table
+def times_table(X):
+    for counter in range(1, 13):
+        print("{} x {} = {}".format(X, counter, counter * X))
+
+# Main program
+X = int(input("Enter the number you want the times table of: "))
+times_table(X)
