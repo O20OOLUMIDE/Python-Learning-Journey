@@ -1,0 +1,11 @@
+# ASCII art problem
+
+# Subroutine that outputs string using ASCII design
+def ascii_art(string):
+    print(("+-" * len(string)) + "+")
+    print("|" + "|".join(string))
+    print(("+-" * len(string)) + "+")  
+
+# Main program
+string = input("Enter the text that you want to be in ASCII form: ").strip()
+ascii_art(string)
