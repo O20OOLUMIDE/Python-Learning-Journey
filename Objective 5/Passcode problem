@@ -1,0 +1,23 @@
+# Passcode problem
+
+# Dicitionary containing vowels
+vowels_list = {"a": 0, "e": 1, "i": 2, "o": 3, "u": 4}
+
+# Subroutine that takes word as parameter and return a passcode
+def passcode(word):
+    number_code = []
+    
+    for letter in word:
+        if letter in vowels_list:
+            index = vowels_list[letter]
+            number_code.append(str(index))
+
+    return "".join(number_code)
+
+# Main program
+word = input("Enter the word you want to make the passcode with: ").lower().strip()
+answer = passcode(word)
+
+print(f"The passcode generated for you: {answer}") 
+        
+    
