@@ -1,0 +1,39 @@
+# Scrabble problem
+
+# Dictionary that contains the point value of words
+values_point = {
+    "E": 1, "A": 1, "I": 1, "O": 1, "N": 1, "R": 1,
+    "T": 1, "L": 1, "S": 1, "U": 1,
+    "D": 2, "G": 2,
+    "B": 3, "C": 3, "M": 3, "P": 3,
+    "F": 4, "H": 4, "V": 4, "W": 4, "Y": 4,
+    "K": 5,
+    "J": 8, "X": 8,
+    "Q": 10, "Z": 10
+}
+    
+# Subroutine that returns the basic points value of a word in the game scrabble
+def point_value(word):
+    point_bank = 0
+    for letter in word:
+        point = values_point.get(letter)
+
+        if point is None:
+            print(f"{letter} is not a valid Scrabble letter. ")
+            return None
+        
+        point_bank = point_bank + point
+
+    return point_bank
+
+# Main program
+word = input("Enter the word you want converted to points per scrabble rules: ").strip().upper()
+answer = point_value(word)
+
+if answer is not None:
+    print(f"The points the word is worth is: {answer}") 
+
+    
+    
+    
+    
