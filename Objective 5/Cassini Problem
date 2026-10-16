@@ -1,0 +1,37 @@
+# Cassini problems
+
+# Subroutine that determines whether a binary sequence is valid
+def odd_parity(binary_sequence):
+
+    # Check that the sequence contains exactly 8 bits
+    if len(binary_sequence) != 8:
+        return None
+
+    # Check that the sequence contains only binary digits
+    for character in binary_sequence:
+        if character not in "01":
+            return None
+        
+    # Calculate the number ones
+    number_of_ones = 0
+    for character in binary_sequence:
+        if character == "1":
+            number_of_ones = number_of_ones + 1
+
+    # Return whether the number of odd
+    return number_of_ones % 2 != 0
+
+# Main program
+while True:
+    binary_sequence = input("Enter an 8-bit binary sequence (or Q to quit): ").strip()
+
+    if binary_sequence == "Q":
+        print("Program terminated.")
+        break
+
+    answer = odd_parity(binary_sequence)
+
+    if answer is None:
+        print("Invalid input. Enter exactly 8 bits containing only 0s and 1s. ")
+    else:
+        print(f"The validity of the sequence is: {answer}\n")
