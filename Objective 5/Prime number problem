@@ -1,0 +1,30 @@
+# Prime number problem
+
+# Subroutine that checks if a number is prime or not
+def isPrime(number):
+    if number <= 1:
+        return False
+    
+    for counter in range(2, int((number / 2) + 1), 1):
+        if number % counter == 0:
+            return False
+
+    return True
+
+# Main program
+while True:
+    number = input("Enter the number you want to check for: ")
+
+    if number.isdigit():
+        number = int(number)
+        break
+
+    else:
+        print("Only numbers are accepted, try again\n") 
+
+answer = isPrime(number)
+
+if not answer:
+    print(f"The number {number} is not prime")
+else:
+    print(f"The number {number} is prime") 
