@@ -1,0 +1,19 @@
+# Compound interest problem
+
+# Subroutine to output the interest growth rate on a balance
+def Compound(balance, interest_rate, target_balance):
+    year = 0
+    
+    while balance < target_balance: # Iterate until the balance matches the target balance
+        year = year + 1
+        interest =  balance * interest_rate
+        balance = balance + interest
+
+        print(f"Year {year}: New balance = £{balance:.2f}")
+
+# Main program
+balance = float(input("Enter the current balance of the account: "))
+interest_rate = float(input("Enter the interest rate of the account: "))
+target_balance = float(input("Enter the amount you want the balance in the account to reach: "))
+
+Compound(balance, interest_rate, target_balance)
